@@ -1,0 +1,11 @@
+.DS_Store
+.idea
+*.log
+tmp/
+
+*.uf2
+.west
+zmk/
+zephyr/
+modules/
+build/
