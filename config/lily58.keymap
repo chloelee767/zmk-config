@@ -12,7 +12,8 @@
 
 #define LAYER_BASE 0
 #define LAYER_LOWER 1
-#define LAYER_RAISE 2
+#define LAYER_NUM_NAV 2
+#define LAYER_NAV 3
 
 
 / {
@@ -65,29 +66,6 @@
             >;
         };
 
-        raise_layer {
-            bindings = <
-/* Number Row */
-&trans &trans &trans &trans &trans &trans
-&trans &trans &trans &trans &trans &trans
-/* Qwerty Row */
-&kp GRAVE &kp N1 &kp N2 &kp N3 &kp N4 &kp N5
-&kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &trans
-/* Home Row */
-&kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6
-&trans &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans
-/* Zxcv Row (Left) */
-&kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12
-/* Middle Buttons */
-&trans &trans
-/* Zxcv Row (Right) */
-&kp KP_PLUS &kp MINUS &kp EQUAL &kp LBKT &kp RBKT &kp BSLH
-/* Bottom Row */
-&trans &trans &trans &trans
-&trans &trans &trans &trans
-            >;
-        };
-
         num_nav_layer {
             bindings = <
 /* Number Row */
@@ -107,6 +85,29 @@
 &trans &kp LCTRL &kp LALT &kp LGUI &kp LSFT &trans
 /* Bottom Row */
 &kp MINUS &kp EQUAL &kp N0 &kp TAB
+&trans &trans &trans &trans
+        >;
+    };
+
+        nav_layer {
+            bindings = <
+/* Number Row */
+&trans &trans &trans &trans &trans &trans
+&trans &trans &trans &trans &trans &trans
+/* Qwerty Row */
+&trans &trans &trans &trans &trans &trans
+&kp HOME &kp PG_UP &kp UP &kp PG_DN &trans &trans
+/* Home Row */
+&trans &trans &trans &trans &trans &trans
+&trans &kp END &kp LEFT &kp DOWN &kp RIGHT &trans
+/* Zxcv Row (Left) */
+&trans &trans &trans &trans &trans &trans
+/* Middle Buttons */
+&trans &trans
+/* Zxcv Row (Right) */
+&trans &kp LCTRL &kp LALT &kp LGUI &kp LSFT &trans
+/* Bottom Row */
+&trans &trans &trans &trans
 &trans &trans &trans &trans
         >;
     };
