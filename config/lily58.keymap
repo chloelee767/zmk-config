@@ -110,8 +110,8 @@
 /* Bottom Row */
 &kp MINUS &kp EQUAL &kp N0 &kp TAB
 &trans &trans &trans &trans
-        >;
-    };
+            >;
+        };
 
         nav_layer {
             bindings = <
@@ -133,7 +133,9 @@
 /* Bottom Row */
 &trans &trans &trans &trans
 &trans &trans &trans &trans
-        >;
+            >;
+        };
+
     };
 
     };
