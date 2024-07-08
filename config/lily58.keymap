@@ -167,7 +167,7 @@
             bindings = <&kp>, <&kp>;
         };
 
-        left_nav_mt: left_nav_mod_tap {
+        left_nav_ht: left_nav_hold_tap {
             compatible = "zmk,behavior-hold-tap";
             flavor = "tap-preferred";
             hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
