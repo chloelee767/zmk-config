@@ -219,7 +219,7 @@
             #binding-cells = <1>;
             bindings
                 = <&macro_param_1to2>
-                , <&lm LAYER_Nav MACRO_PLACEHOLDER>
+                , <&lm LAYER_NAV MACRO_PLACEHOLDER>
                 ;
         };
     };
