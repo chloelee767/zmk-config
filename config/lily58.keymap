@@ -57,17 +57,17 @@
 &caps_word &kp Q &kp W &kp E &kp R &kp T
 &kp Y &kp U &kp I &kp O &kp P &caps_word
 /* Home Row */
-&kp ESC &kp A &kp S &kp D &kp F &kp G
-&kp H &kp J &kp K &kp L &kp SEMI &kp SQT
+&kp ESC &left_ht LSHFT A &left_ht LGUI S &left_ht LALT D &left_ht LCTRL F &kp G
+&kp H &right_ht LCTRL J &right_ht LALT K &right_ht LGUI L &right_ht LSHFT SEMI &kp SQT
 /* Zxcv Row (Left) */
-&kp LSHFT &kp Z &kp X &kp C &kp V &kp B
+&kp LSHFT &left_nav_ht LSHFT Z &left_nav_ht LGUI X &left_nav_ht LALT C &left_nav_ht LCTRL V &kp B
 /* Middle Buttons */
 &kp GRAVE &kp BSPC
 /* Zxcv Row (Right) */
 &kp N &kp M &kp COMMA &kp DOT &kp FSLH &kp RSHFT
 /* Bottom Row */
-&kp LGUI &kp DEL &kp BSPC &kp TAB
-&kp RET &kp SPACE &none &none
+&kp LGUI &kp DEL &kp BSPC &lt LAYER_NUM_NAV TAB
+&kp RET &lt LAYER_NUM_NAV SPACE &none &none
             >;
         };
 
