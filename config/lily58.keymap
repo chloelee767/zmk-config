@@ -8,6 +8,7 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/ext_power.h>
+#include <dt-bindings/zmk/mouse.h>
 
 #define LAYER_BASE 0
 #define LAYER_LOWER 1
@@ -21,23 +22,23 @@
         default_layer {
             bindings = <
 /* Number Row */
-&kp ESC &kp N1 &kp N2 &kp N3 &kp N4 &kp N5
-&kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &kp GRAVE
+&none &none &none &mkp MCLK &mkp LCLK &mkp RCLK
+&kp N0 &kp LEFT_BRACKET &kp RIGHT_BRACKET &kp BACKSLASH &kp MINUS &kp EQUAL
 /* Qwerty Row */
-&kp TAB &kp Q &kp W &kp E &kp R &kp T
-&kp Y &kp U &kp I &kp O &kp P &kp MINUS
+&caps_word &kp Q &kp W &kp E &kp R &kp T
+&kp Y &kp U &kp I &kp O &kp P &caps_word
 /* Home Row */
-&kp LCTRL &kp A &kp S &kp D &kp F &kp G
+&kp ESC &kp A &kp S &kp D &kp F &kp G
 &kp H &kp J &kp K &kp L &kp SEMI &kp SQT
 /* Zxcv Row (Left) */
 &kp LSHFT &kp Z &kp X &kp C &kp V &kp B
 /* Middle Buttons */
-&kp LBKT &kp RBKT
+&kp GRAVE &kp BSPC
 /* Zxcv Row (Right) */
 &kp N &kp M &kp COMMA &kp DOT &kp FSLH &kp RSHFT
 /* Bottom Row */
-&kp LALT &kp LGUI &mo LAYER_LOWER &kp SPACE
-&kp RET &mo LAYER_RAISE &kp BSPC &kp RGUI
+&kp LGUI &kp DEL &kp BSPC &kp TAB
+&kp RET &kp SPACE &none &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
