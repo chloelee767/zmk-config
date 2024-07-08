@@ -112,7 +112,7 @@
 /* Zxcv Row (Right) */
 &trans &kp LCTRL &kp LALT &kp LGUI &kp LSFT &trans
 /* Bottom Row */
-&kp MINUS &kp EQUAL &kp N0 &kp TAB
+&kp MINUS &kp EQUAL &kp N0 &trans
 &trans &trans &trans &trans
             >;
         };
