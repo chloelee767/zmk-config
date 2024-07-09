@@ -107,7 +107,7 @@
 &kp CARET &kp AMPERSAND &kp KP_MULTIPLY &kp PIPE &kp BACKSLASH &trans
 /* Home Row */
 &trans &kp EXCL &kp PERCENT &kp MINUS &kp COLON &kp TILDE
-&kp DOLLAR &kp LEFT_BRACKET &kp RIGHT_BRACKET &kp LEFT_BRACE &kp RIGHT_BRACE &kp DOUBLE_QUOTES
+&kp DOLLAR &kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS &kp LEFT_BRACE &kp RIGHT_BRACE &kp DOUBLE_QUOTES
 /* Zxcv Row (Left) */
 &trans &kp AT &kp HASH &kp UNDERSCORE &kp AT &trans
 /* Middle Buttons */
