@@ -69,7 +69,7 @@
 /* Zxcv Row (Right) */
 &kp N &right_num_ht LCTRL M &right_num_ht LALT COMMA &right_num_ht LGUI DOT &right_num_ht LSHFT FSLH &kp RSHFT
 /* Bottom Row */
-&kp LGUI &kp DEL &lt LAYER_SYMBOL BSPC &lt LAYER_NUM_NAV TAB
+&kp LGUI &lt LAYER_FN_KEY DEL &lt LAYER_SYMBOL BSPC &lt LAYER_NUM_NAV TAB
 &lt LAYER_SYMBOL RET &lt LAYER_NUM_NAV SPACE &mo LAYER_FN_KEY &mo LAYER_MEDIA
             >;
         };
