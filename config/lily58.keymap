@@ -67,7 +67,7 @@
 /* Zxcv Row (Right) */
 &kp N &kp M &kp COMMA &kp DOT &kp FSLH &kp RSHFT
 /* Bottom Row */
-&lm_nav LCTRL &kp DEL &lt LAYER_SYMBOL BSPC &lt LAYER_NUM_NAV TAB
+&kp LGUI &kp DEL &lt LAYER_SYMBOL BSPC &lt LAYER_NUM_NAV TAB
 &lt LAYER_SYMBOL RET &lt LAYER_NUM_NAV SPACE &none &none
             >;
         };
