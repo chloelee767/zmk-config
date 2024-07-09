@@ -67,7 +67,7 @@
 /* Zxcv Row (Right) */
 &kp N &kp M &kp COMMA &kp DOT &kp FSLH &kp RSHFT
 /* Bottom Row */
-&lm LAYER_NAV LCTRL &kp DEL &lt LAYER_SYMBOL BSPC &lt LAYER_NUM_NAV TAB
+&lm_nav LCTRL &kp DEL &lt LAYER_SYMBOL BSPC &lt LAYER_NUM_NAV TAB
 &lt LAYER_SYMBOL RET &lt LAYER_NUM_NAV SPACE &none &none
             >;
         };
@@ -243,7 +243,9 @@
             #binding-cells = <1>;
             bindings
                 = <&macro_param_1to2>
-                , <&lm LAYER_NAV MACRO_PLACEHOLDER>
+                , <&macro_press &lm LAYER_NAV MACRO_PLACEHOLDER>
+                , <&macro_pause_for_release>
+                , <&macro_release &lm LAYER_NAV MACRO_PLACEHOLDER>
                 ;
         };
     };
