@@ -22,6 +22,7 @@
 #define HOMEY_HOLDING_TIME 200
 #define HOMEY_REPEAT_DECAY 200
 #define HOMEY_STREAK_DECAY 0
+#define COMBO_TIMEOUT 50
 
 // 0  1  2  3  4  5       |      6  7  8  9  10 11
 // 12 13 14 15 16 17      |      18 19 20 21 22 23
@@ -48,6 +49,28 @@
 
 
 / {
+
+    combos {
+        compatible = "zmk,combos";
+
+        // Add combos for symbols that are often typed quickly.
+
+        combo_minus {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <27 52>; // D + BSPC (sym)
+            bindings = <&kp MINUS>;
+            layers = <LAYER_BASE LAYER_SYMBOL>;
+        };
+
+        combo_underscore {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <39 52>; // C + BSPC (sym)
+            bindings = <&kp UNDERSCORE>;
+            layers = <LAYER_BASE LAYER_SYMBOL>;
+        };
+
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
