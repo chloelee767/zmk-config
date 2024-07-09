@@ -83,8 +83,8 @@
 &caps_word &kp Q &kp W &kp E &kp R &kp T
 &kp Y &kp U &kp I &kp O &kp P &caps_word
 /* Home Row */
-&kp ESC &left_ht LSHFT A &left_ht LGUI S &left_ht LALT D &left_ht LCTRL F &kp G
-&kp H &right_ht LCTRL J &right_ht LALT K &right_ht LGUI L &right_ht LSHFT SEMI &kp SQT
+&kp ESC &left_agg_ht LSHFT A &left_ht LGUI S &left_ht LALT D &left_ht LCTRL F &kp G
+&kp H &right_ht LCTRL J &right_ht LALT K &right_ht LGUI L &right_agg_ht LSHFT SEMI &kp SQT
 /* Zxcv Row (Left) */
 &kp LSHFT &left_nav_ht LSHFT Z &left_nav_ht LGUI X &left_nav_ht LALT C &left_nav_ht LCTRL V &kp B
 /* Middle Buttons */
@@ -251,9 +251,35 @@
             bindings = <&kp>, <&kp>;
         };
 
+        left_agg_ht: left_aggressive_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            flavor = "hold-preferred";
+            hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
+            hold-trigger-on-release; // wait for other home row mods
+            // hold-while-undecided;
+            tapping-term-ms = <HOMEY_HOLDING_TIME>;
+            quick-tap-ms = <HOMEY_REPEAT_DECAY>;
+            require-prior-idle-ms = <HOMEY_STREAK_DECAY>;
+            #binding-cells = <2>;
+            bindings = <&kp>, <&kp>;
+        };
+
         right_ht: right_hold_tap {
             compatible = "zmk,behavior-hold-tap";
             flavor = HOMEY_HOLDING_TYPE;
+            hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
+            hold-trigger-on-release; // wait for other home row mods
+            // hold-while-undecided;
+            tapping-term-ms = <HOMEY_HOLDING_TIME>;
+            quick-tap-ms = <HOMEY_REPEAT_DECAY>;
+            require-prior-idle-ms = <HOMEY_STREAK_DECAY>;
+            #binding-cells = <2>;
+            bindings = <&kp>, <&kp>;
+        };
+
+        right_agg_ht: right_aggressive_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            flavor = "hold-preferred";
             hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
             hold-trigger-on-release; // wait for other home row mods
             // hold-while-undecided;
