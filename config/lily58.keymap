@@ -198,6 +198,7 @@
             flavor = HOMEY_HOLDING_TYPE;
             hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
             hold-trigger-on-release; // wait for other home row mods
+            hold-while-undecided;
             tapping-term-ms = <HOMEY_HOLDING_TIME>;
             quick-tap-ms = <HOMEY_REPEAT_DECAY>;
             require-prior-idle-ms = <HOMEY_STREAK_DECAY>;
@@ -210,6 +211,7 @@
             flavor = HOMEY_HOLDING_TYPE;
             hold-trigger-key-positions = <LEFT_HAND_KEYS THUMB_KEYS>;
             hold-trigger-on-release; // wait for other home row mods
+            hold-while-undecided;
             tapping-term-ms = <HOMEY_HOLDING_TIME>;
             quick-tap-ms = <HOMEY_REPEAT_DECAY>;
             require-prior-idle-ms = <HOMEY_STREAK_DECAY>;
