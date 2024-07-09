@@ -53,7 +53,7 @@
     combos {
         compatible = "zmk,combos";
 
-        // Add combos for symbols that are often typed quickly.
+        // Add combos for frequent quickly typed layer keys.
 
         combo_minus {
             timeout-ms = <COMBO_TIMEOUT>;
