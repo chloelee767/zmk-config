@@ -53,20 +53,25 @@
     combos {
         compatible = "zmk,combos";
 
-        // Add combos for frequent quickly typed layer keys.
-
-        combo_minus {
+        combo_shift_left {
             timeout-ms = <COMBO_TIMEOUT>;
-            key-positions = <27 52>; // D + BSPC (sym)
-            bindings = <&kp MINUS>;
-            layers = <LAYER_BASE LAYER_SYMBOL>;
+            key-positions = <16 28>; // F + R
+            bindings = <&sk LSHFT>;
+            layers = <LAYER_BASE>;
         };
 
-        combo_underscore {
+        combo_shift_right {
             timeout-ms = <COMBO_TIMEOUT>;
-            key-positions = <39 52>; // C + BSPC (sym)
-            bindings = <&kp UNDERSCORE>;
-            layers = <LAYER_BASE LAYER_SYMBOL>;
+            key-positions = <19 31>; // U + J
+            bindings = <&sk LSHFT>;
+            layers = <LAYER_BASE>;
+        };
+
+        combo_caps_word {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <12 23>; // Qwerty row corners
+            bindings = <&caps_word>;
+            layers = <LAYER_BASE>;
         };
 
     };
@@ -80,10 +85,10 @@
 &none &none &none &mkp MCLK &mkp LCLK &mkp RCLK
 &kp N0 &kp LEFT_BRACKET &kp RIGHT_BRACKET &kp BACKSLASH &kp MINUS &kp EQUAL
 /* Qwerty Row */
-&caps_word &kp Q &kp W &kp E &kp R &kp T
-&kp Y &kp U &kp I &kp O &kp P &caps_word
+&sk LSHFT &kp Q &kp W &kp E &kp R &kp T
+&kp Y &kp U &kp I &kp O &kp P &sk LSHFT
 /* Home Row */
-&kp ESC &left_agg_ht LSHFT A &left_ht LGUI S &left_ht LALT D &left_ht LCTRL F &kp G
+&kp ESC &left_ht LSHFT A &left_ht LGUI S &left_ht LALT D &left_ht LCTRL F &kp G // hold-preferred on A has too many false positives
 &kp H &right_ht LCTRL J &right_ht LALT K &right_ht LGUI L &right_agg_ht LSHFT SEMI &kp SQT
 /* Zxcv Row (Left) */
 &kp LSHFT &left_nav_ht LSHFT Z &left_nav_ht LGUI X &left_nav_ht LALT C &left_nav_ht LCTRL V &kp B
