@@ -85,8 +85,8 @@
 &none &none &none &mkp MCLK &mkp LCLK &mkp RCLK
 &kp N0 &kp LEFT_BRACKET &kp RIGHT_BRACKET &kp BACKSLASH &kp MINUS &kp EQUAL
 /* Qwerty Row */
-&sk LSHFT &kp Q &kp W &kp E &kp R &kp T
-&kp Y &kp U &kp I &kp O &kp P &sk LSHFT
+&caps_word &kp Q &kp W &kp E &kp R &kp T
+&kp Y &kp U &kp I &kp O &kp P &caps_word
 /* Home Row */
 &kp ESC &left_ht LSHFT A &left_ht LGUI S &left_ht LALT D &left_ht LCTRL F &kp G // hold-preferred on A has too many false positives
 &kp H &right_ht LCTRL J &right_ht LALT K &right_ht LGUI L &right_agg_ht LSHFT SEMI &kp SQT
