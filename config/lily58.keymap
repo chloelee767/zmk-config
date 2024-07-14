@@ -67,13 +67,6 @@
             layers = <LAYER_BASE>;
         };
 
-        combo_caps_word {
-            timeout-ms = <COMBO_TIMEOUT>;
-            key-positions = <12 23>; // Qwerty row corners
-            bindings = <&caps_word>;
-            layers = <LAYER_BASE>;
-        };
-
     };
 
     keymap {
