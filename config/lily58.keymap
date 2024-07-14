@@ -11,12 +11,14 @@
 #include <dt-bindings/zmk/mouse.h>
 
 #define LAYER_BASE 0
-#define LAYER_NUM_NAV 1
-#define LAYER_SYMBOL 2
-#define LAYER_NAV 3
-#define LAYER_NUM 4
-#define LAYER_FN_KEY 5
-#define LAYER_MEDIA 6
+#define LAYER_BASE_WIN 1
+#define LAYER_NUM_NAV 2
+#define LAYER_SYMBOL 3
+#define LAYER_NAV 4
+#define LAYER_NUM 5
+#define LAYER_FN_KEY 6
+#define LAYER_MEDIA 7
+#define LAYER_SWITCH 8
 
 #define HOMEY_HOLDING_TYPE "balanced"
 #define HOMEY_HOLDING_TIME 200
@@ -67,6 +69,11 @@
             layers = <LAYER_BASE>;
         };
 
+        combo_switch_layer {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <56 57>; // RHS fn layer + media layer
+            bindings = <&mo LAYER_SWITCH>;
+        };
     };
 
     keymap {
@@ -92,6 +99,30 @@
 /* Bottom Row */
 &kp LGUI &lt LAYER_FN_KEY DEL &agg_lt LAYER_SYMBOL BSPC &lt LAYER_NUM_NAV TAB
 &agg_lt LAYER_SYMBOL RET &lt LAYER_NUM_NAV SPACE &mo LAYER_FN_KEY &mo LAYER_MEDIA
+            >;
+        };
+
+        // replace HRM GUI with CTRL
+        default_win_layer {
+            bindings = <
+/* Number Row */
+&trans &trans &trans &trans &trans &trans
+&trans &trans &trans &trans &trans &trans
+/* Qwerty Row */
+&trans &trans &trans &trans &trans &trans
+&trans &trans &trans &trans &trans &trans
+/* Home Row */
+&trans &trans &left_ht LCTRL &trans &trans &trans
+&trans &trans &trans &right_ht LCTRL &trans &trans
+/* Zxcv Row (Left) */
+&trans &trans &trans &trans &trans &trans
+/* Middle Buttons */
+&trans &trans
+/* Zxcv Row (Right) */
+&trans &trans &trans &trans &trans &trans
+/* Bottom Row */
+&trans &trans &trans &trans
+&trans &trans &trans &trans
             >;
         };
 
@@ -227,6 +258,29 @@
 &trans &trans
 /* Zxcv Row (Right) */
 &bt BT_DISC 0 &bt BT_DISC 1 &bt BT_DISC 2 &bt BT_DISC 3 &bt BT_DISC 4 &trans
+/* Bottom Row */
+&trans &trans &trans &trans
+&trans &trans &trans &trans
+            >;
+        };
+
+        switch_layer {
+            bindings = <
+/* Number Row */
+&trans &tog LAYER_BASE &tog LAYER_BASE_WIN &trans &trans &trans
+&trans &trans &trans &trans &trans &trans
+/* Qwerty Row */
+&trans &trans &trans &trans &trans &trans
+&trans &trans &trans &trans &trans &trans
+/* Home Row */
+&trans &trans &trans &trans &trans &trans
+&trans &trans &trans &trans &trans &trans
+/* Zxcv Row (Left) */
+&trans &trans &trans &trans &trans &trans
+/* Middle Buttons */
+&trans &trans
+/* Zxcv Row (Right) */
+&trans &trans &trans &trans &trans &trans
 /* Bottom Row */
 &trans &trans &trans &trans
 &trans &trans &trans &trans
