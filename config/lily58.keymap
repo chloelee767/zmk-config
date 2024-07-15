@@ -69,11 +69,12 @@
             layers = <LAYER_BASE>;
         };
 
-        combo_switch_layer {
-            timeout-ms = <COMBO_TIMEOUT>;
-            key-positions = <56 57>; // RHS fn layer + media layer
-            bindings = <&mo LAYER_SWITCH>;
-        };
+        // TODO fix this layer
+        // combo_switch_layer {
+        //     timeout-ms = <COMBO_TIMEOUT>;
+        //     key-positions = <56 57>; // RHS fn layer + media layer
+        //     bindings = <&mo LAYER_SWITCH>;
+        // };
     };
 
     keymap {
@@ -102,6 +103,7 @@
             >;
         };
 
+        // TODO right hand not replaced correctly? opt -> ctrl
         // replace HRM GUI with CTRL
         default_win_layer {
             bindings = <
