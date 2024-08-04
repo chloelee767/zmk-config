@@ -55,10 +55,10 @@
     combos {
         compatible = "zmk,combos";
 
-        combo_shift_left {
+        combo_grave {
             timeout-ms = <COMBO_TIMEOUT>;
             key-positions = <16 28>; // F + R
-            bindings = <&sk LSHFT>;
+            bindings = <&kp GRAVE>;
             layers = <LAYER_BASE>;
         };
 
