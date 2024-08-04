@@ -62,10 +62,24 @@
             layers = <LAYER_BASE>;
         };
 
-        combo_shift_right {
+        combo_left_bracket {
             timeout-ms = <COMBO_TIMEOUT>;
             key-positions = <19 31>; // U + J
-            bindings = <&sk LSHFT>;
+            bindings = <&kp LEFT_BRACKET>;
+            layers = <LAYER_BASE>;
+        };
+
+        combo_right_bracket {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <20 32>; // I + K
+            bindings = <&kp RIGHT_BRACKET>;
+            layers = <LAYER_BASE>;
+        };
+
+        combo_backslash {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <21 33>; // O + L
+            bindings = <&kp BACKSLASH>;
             layers = <LAYER_BASE>;
         };
 
