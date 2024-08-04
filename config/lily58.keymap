@@ -19,6 +19,7 @@
 #define LAYER_FN_KEY 6
 #define LAYER_MEDIA 7
 #define LAYER_SWITCH 8
+#define LAYER_NAV_LEFT 9
 
 #define HOMEY_HOLDING_TYPE "balanced"
 #define HOMEY_HOLDING_TIME 200
@@ -81,6 +82,20 @@
             key-positions = <21 33>; // O + L
             bindings = <&kp BACKSLASH>;
             layers = <LAYER_BASE>;
+        };
+
+        combo_nav_left_on {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <50 51>; // bottom left corner
+            bindings = <&to LAYER_NAV_LEFT>;
+            layers = <LAYER_BASE>;
+        };
+
+        combo_nav_left_off {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <50 51>; // bottom left corner
+            bindings = <&to LAYER_BASE>;
+            layers = <LAYER_NAV_LEFT>;
         };
 
         // TODO fix this layer
@@ -299,6 +314,29 @@
 &trans &trans &trans &trans &trans &trans
 /* Bottom Row */
 &trans &trans &trans &trans
+&trans &trans &trans &trans
+            >;
+        };
+
+        nav_left_layer {
+            bindings = <
+/* Number Row */
+&trans &trans &trans &trans &trans &trans
+&trans &trans &trans &trans &trans &trans
+/* Qwerty Row */
+&kp TAB &trans &kp PG_UP &kp UP &kp PG_DN &kp HOME
+&trans &trans &trans &trans &trans &trans
+/* Home Row */
+&trans &trans &kp LEFT &kp DOWN &kp RIGHT &kp END
+&trans &trans &trans &trans &trans &trans
+/* Zxcv Row (Left) */
+&trans &kp LSFT &kp LGUI &kp LALT &kp LCTRL &trans
+/* Middle Buttons */
+&trans &trans
+/* Zxcv Row (Right) */
+&trans &trans &trans &trans &trans &trans
+/* Bottom Row */
+&trans &trans &trans &kp SPACE
 &trans &trans &trans &trans
             >;
         };
